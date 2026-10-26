@@ -3,8 +3,8 @@ package hello.core.order;
 public class Order {
     private Long memberId;
     private String itemName;
-    private  int itemPrice;
-    private  int discountPrice;
+    private int itemPrice;
+    private int discountPrice;
 
     public Order(Long memberId, String itemName, int itemPrice, int discountPrice) {
         this.memberId = memberId;
@@ -13,9 +13,7 @@ public class Order {
         this.discountPrice = discountPrice;
     }
 
-
-    // 비즈니스
-    public int calculatePrice(){
+    public int calculate() {
         return itemPrice - discountPrice;
     }
 
@@ -43,11 +41,6 @@ public class Order {
         this.itemPrice = itemPrice;
     }
 
-
-
-
-
-
     public int getDiscountPrice() {
         return discountPrice;
     }
@@ -55,7 +48,6 @@ public class Order {
     public void setDiscountPrice(int discountPrice) {
         this.discountPrice = discountPrice;
     }
-
 
     @Override
     public String toString() {
@@ -65,6 +57,6 @@ public class Order {
                 ", itemPrice=" + itemPrice +
                 ", discountPrice=" + discountPrice +
                 '}';
-
     }
+
 }
